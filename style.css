@@ -3,20 +3,25 @@
     margin: 0;
 }
 
+body{
+    background-color: rgb(150, 150, 150);
+}
+
 #container{
     border: 5px solid pink;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    justify-content: center;
 }
 
 #box-container-1{
-    border: 3px dashed red;
+    border: 3px solid red;
     grid-column: span 2;
     padding: 20px;
 }
 
 #box-container-2{
-    border: 3px dashed blue;
+    border: 3px solid blue;
     grid-column: span 4;
 
     display: grid;
@@ -24,3 +29,125 @@
     grid-template-columns: repeat(2, 1fr);
 }
 
+#user{
+    border: 2px solid black;
+    grid-column: span 2;
+    /* grid-row: span 8; Questionable horizontal expansion; Unlikely to expand dynamically. */
+
+    display: grid;
+    gap: 20px;
+    padding: 10px;
+}
+
+#user-header{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    gap: 10px;
+}
+
+#user-header > button{
+    /* Change this to fit the icons for the search and bell icons */
+
+    width: 60px;
+    height: 30px;
+    border-radius: 1rem;
+}
+
+#user-header > input{
+    height: 30px;
+    border-radius: 1rem;
+    padding: 10px;
+    background-color: whitesmoke;
+    border: none;
+}
+
+.profile-picture{
+    /* background-image: url(); */
+    /* Add user profile picture */
+}
+
+.small{
+    /* Adjust user profile picture to fit the smaller container */
+}
+
+
+.large{
+    /* Adjust user profile picture to fit the larger container */
+}
+
+#user-header > h2, #user-header > h2 > img{
+    font-size: 0.8rem;
+    grid-column: span 3;
+    margin: 0 20px;
+    justify-self: end;
+}
+
+#user-header > h2 > img{
+    height: 30px;
+    width: 30px;
+    border-radius: 1rem;
+    border: 2px solid pink;
+}
+
+#welcome{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    align-items: center;
+}
+
+#welcome > button{
+    width: 80px;
+    height: calc(1vw + 30px);
+    font-size: 1rem;
+    border-radius: 1rem;
+    align-self: center;
+}
+
+#welcome > h2, #welcome > h2 > img{
+    text-align: center;
+    grid-column: span 3;
+    margin: 0 20px;
+}
+
+#welcome > h2 > img{
+    border: 10px solid pink;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+#welcome > h2{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 10fr repeat(2, 0fr) 36fr 4fr;
+}
+
+#content{
+    grid-row: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column: span 2;
+}
+
+#projects{
+    border: 5px dashed green;
+    grid-column: span 3;
+}
+
+#side-content{
+    border: 7px inset goldenrod;
+    padding: 10px; /* REMOVE after testing */
+    display: grid;
+    gap: 10px;
+    
+}
+
+#announcements{
+    border: 5px dashed lightyellow;
+}
+
+#trending{
+    border: 5px dashed hotpink;
+}
