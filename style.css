@@ -5,24 +5,58 @@
 
 body{
     background-color: rgb(150, 150, 150);
+    display: grid;
+    height: 100vh;
 }
 
 #container{
     border: 5px solid pink;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     justify-content: center;
 }
 
 #box-container-1{
     border: 3px solid red;
-    grid-column: span 2;
+    grid-column: span 3;
     padding: 20px;
+}
+
+#menu{
+    display: grid;
+    align-items: center;
+    gap: 30px;
+}
+
+#logo-header > h2{
+    font-size: 1.8rem;
+}
+
+#logo-header > h2 > img{
+    border: 2px solid pink;
+    width: 30px;
+    height: 30px;
+    border-radius: 1rem;
+    margin: 0 10px;
+}
+
+li{
+    list-style: none;
+    margin: 15px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.icons{
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+    margin-right: 35px;
 }
 
 #box-container-2{
     border: 3px solid blue;
-    grid-column: span 4;
+    grid-column: span 9;
 
     display: grid;
     /* grid-template-rows: repeat(2, 2fr); */
@@ -112,7 +146,7 @@ body{
 }
 
 #welcome > h2 > img{
-    border: 10px solid pink;
+    /* border: 10px solid pink; Used as guideline */
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -129,25 +163,91 @@ body{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column: span 2;
+    padding: 16px;
 }
 
 #projects{
-    border: 5px dashed green;
+    /* border: 5px dashed green; Used as guideline */
     grid-column: span 3;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin: 0px 32px;
+}
+
+#projects > .titles{
+    grid-column: span 2;
 }
 
 #side-content{
-    border: 7px inset goldenrod;
-    padding: 10px; /* REMOVE after testing */
+    /* border: 7px inset goldenrod; Used as guideline */
+
+    padding: 10px;
     display: grid;
     gap: 10px;
-    
 }
 
 #announcements{
-    border: 5px dashed lightyellow;
+    /* border: 5px dashed lightyellow; Used as guideline */
+    display: grid;
+    align-items: center;
+}
+
+.announce-comments{
+    box-shadow: 0px 2px 5px black;
+    padding: 15px;
+}
+
+.announce-comments-titles{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.comments{
+    font-size: 1rem;
 }
 
 #trending{
-    border: 5px dashed hotpink;
+    /* border: 5px dashed hotpink; Used as guideline */
+    display: grid;
+    gap: 35px;
+    background-color: rgb(162, 162, 162);
+    border-radius: 0.6rem;
+    padding: 15px;
+}
+
+.users{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: center;
+}
+
+.users > img{
+    border: 10px solid hotpink;
+    margin-left: 16px;
+    border-radius: 2rem;
+    width: 60px;
+    height: 60px;
+}
+
+#trending-user{
+    grid-column: span 2;
+    font-size: 1rem;
+}
+
+.usertags{
+    font-weight: bold;
+}
+
+.cards{
+    border: none;
+    border-left: 8px solid rgb(221, 195, 47);
+    border-radius: 0.6rem;
+    background-color: rgb(162, 162, 162);
+    padding: 40px;
+    margin: 0 20px;
 }
