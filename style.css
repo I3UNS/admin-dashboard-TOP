@@ -22,6 +22,11 @@ body{
     padding: 20px;
 }
 
+#box-container-1, #welcome-user-buttons > button{
+    background-color: #0f88ec;
+    color: white;
+}
+
 #menu{
     display: grid;
     align-items: center;
@@ -57,9 +62,7 @@ li{
 #box-container-2{
     border: 3px solid blue;
     grid-column: span 9;
-
     display: grid;
-    /* grid-template-rows: repeat(2, 2fr); */
     grid-template-columns: repeat(2, 1fr);
 }
 
@@ -99,6 +102,7 @@ li{
 .profile-picture{
     /* background-image: url(); */
     /* Add user profile picture */
+    background-color: whitesmoke;
 }
 
 .small{
@@ -121,41 +125,46 @@ li{
     height: 30px;
     width: 30px;
     border-radius: 1rem;
-    border: 2px solid pink;
 }
 
 #welcome{
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 20px;
+    grid-template-columns: 1fr 3fr repeat(3, 1fr);
+    border: 5px solid darkgoldenrod;
     align-items: center;
 }
 
-#welcome > button{
-    width: 80px;
-    height: calc(1vw + 30px);
-    font-size: 1rem;
-    border-radius: 1rem;
-    align-self: center;
-}
-
-#welcome > h2, #welcome > h2 > img{
-    text-align: center;
+#greeting-box{
     grid-column: span 3;
-    margin: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 20px;
 }
 
-#welcome > h2 > img{
-    /* border: 10px solid pink; Used as guideline */
+#greeting-box > h2{
+    text-align: left;
+    grid-column: span 5;
+
+}
+
+#greeting-box > img{
     width: 80px;
     height: 80px;
     border-radius: 50%;
 }
 
-#welcome > h2{
+#welcome-user-buttons{
     display: grid;
-    align-items: center;
-    grid-template-columns: 10fr repeat(2, 0fr) 36fr 4fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#welcome-user-buttons > button{
+    width: 96px;
+    height: 32px;
+    font-size: 1rem;
+    border-radius: 1rem;
+    align-self: center;
 }
 
 #content{
@@ -250,4 +259,8 @@ li{
     background-color: rgb(162, 162, 162);
     padding: 40px;
     margin: 0 20px;
+}
+
+#greeting-font-size{
+    font-size: 0.5em;
 }
