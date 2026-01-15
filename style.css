@@ -3,6 +3,14 @@
     margin: 0;
 }
 
+.font-container {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  letter-spacing: 1px;
+  /* font-style: normal; */
+}
+
 body{
     background-color: #dcdcdc;
     display: grid;
