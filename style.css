@@ -20,11 +20,7 @@ body{
     padding: 20px;
 }
 
-#box-container-1, #welcome-user-buttons > button{
-    background-color: #0f88ec;
-    color: white;
-    font-weight: bold;
-}
+/* Menu Design */
 
 #menu{
     display: grid;
@@ -63,11 +59,14 @@ li{
     margin-right: 28px;
 }
 
+
 #box-container-2{
     grid-column: span 9;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
+/* Search Bar Design */
 
 #user{
     background-color: whitesmoke;
@@ -75,7 +74,6 @@ li{
     display: grid;
     gap: 20px;
     padding: 10px;
-    box-shadow: 0px 2px 5px #5656569a; /* USE this to encapsulate the cards, announcements, trending and the user containers in one single CSS line. */
 }
 
 #user-header{
@@ -87,7 +85,6 @@ li{
 .search-interactable{
     display: grid;
     justify-self: center;
-    align-items: center;
     border: none;
     background-color: whitesmoke;
 }
@@ -103,39 +100,39 @@ li{
 
 #user-header > button{
     /* Change this to fit the icons for the search and bell icons */
-    width: 30px;
+    width: 35px;
     height: auto;
-    padding: 5px;
-    border-radius: 1rem;
 }
 
 #search-bar{
     height: 30px;
     width: 540px;
     border-radius: 1rem;
-    padding: 10px;
     background-color: #dcdcdc;
     border: none;
 }
 
+/* User Profile Design */
+
 .profile-picture{
-    /* background-image: url(); */
-    /* Add user profile picture */
     background-color: #dcdcdc;
-    padding: 5px;
+    border-radius: 1rem;
 }
 
 .small{
     /* Adjust user profile picture to fit the smaller container */
     height: 30px;
     width: 30px;
-    border-radius: 1rem;
     padding: 2px;
 }
 
 
 .large{
     /* Adjust user profile picture to fit the larger container */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    padding: 5px;
 }
 
 .bell{
@@ -148,16 +145,12 @@ li{
     grid-template-columns: repeat(2, 1fr);
 }
 
-#user-small > h2, .small{
-    font-size: 0.8rem;
-    margin: 15px 10px;
-}
-
 #user-small > h2{
     width: 100px;
-    text-align: center;
-    margin-top: 20px;
+    padding-top: 5px;
 }
+
+/* Welcome Design */
 
 #welcome{
     display: grid;
@@ -173,16 +166,13 @@ li{
     gap: 20px;
 }
 
+#greeting-font-size{
+    font-size: 0.5em;
+}
+
 #greeting-box > h2{
     text-align: left;
     grid-column: span 5;
-
-}
-
-#greeting-box > img{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
 }
 
 #welcome-user-buttons{
@@ -200,8 +190,9 @@ li{
     align-self: center;
 }
 
+/* Content and Side Content Design */
+
 #content{
-    grid-row: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column: span 2;
@@ -210,7 +201,6 @@ li{
 
 #projects{
     grid-column: span 3;
-    grid-row: span 2;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
@@ -222,77 +212,7 @@ li{
 .titles{
     grid-column: span 2;
     align-self: last baseline;
-}
-
-#side-content{
-    display: grid;
-    gap: 10px;
-}
-
-#content{
-    display: grid;
-    align-items: first baseline;
-}
-
-#announcements{
-    background-color: whitesmoke;
-    padding: 20px;
-    border-radius: 0.6rem;
-}
-
-.announce-comments{
-    border-bottom: 2px solid #dcdcdc;
-    padding: 15px;
-}
-
-.announce-comments:last-child{
-    border: none;
-}
-
-.announce-comments-titles{
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.comments{
-    font-size: 1rem;
-}
-
-#content .titles{
     margin-top: 10px;
-}
-
-#trending{
-    grid-row: span 6;
-    display: grid;
-    gap: 25px;
-    background-color: whitesmoke;
-    border-radius: 0.6rem;
-    padding: 15px;
-}
-
-.users{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    align-items: center;
-}
-
-.users > img{
-    background-color: #dcdcdc;
-    margin-left: 16px;
-    border-radius: 2rem;
-    width: 60px;
-    height: 60px;
-}
-
-#trending-user{
-    grid-column: span 2;
-    font-size: 1rem;
-}
-
-.usertags{
-    font-weight: bold;
 }
 
 .cards{
@@ -303,9 +223,6 @@ li{
     padding: 20px 40px 0;
 }
 
-#greeting-font-size{
-    font-size: 0.5em;
-}
 
 #card-buttons{
     margin: 26px 0;
@@ -327,6 +244,86 @@ li{
     width: inherit;
     height: auto;
 }
+
+#side-content{
+    display: grid;
+    gap: 10px;
+}
+
+#announcements{
+    background-color: whitesmoke;
+    padding: 16px;
+    border-radius: 0.6rem;
+}
+
+.announce-comments{
+    border-bottom: 2px solid #dcdcdc;
+    padding: 15px;
+}
+
+.announce-comments:last-child{
+    border: none;
+}
+
+.announce-comments-titles{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.comments{
+    font-size: 1rem;
+}
+
+#trending{
+    grid-row: span 6;
+    display: grid;
+    gap: 25px;
+    background-color: whitesmoke;
+    border-radius: 0.6rem;
+    padding: 15px;
+}
+
+.users{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: center;
+}
+
+.users > img{
+    background-color: #dcdcdc;
+    border-radius: 2rem;
+    width: 60px;
+    height: 60px;
+}
+
+#trending-user{
+    grid-column: span 2;
+    font-size: 1rem;
+}
+
+.usertags{
+    font-weight: bold;
+}
+
+/* Shared CSS effects */
+
+#box-container-1, #welcome-user-buttons > button{
+    background-color: #0f88ec;
+    color: white;
+    font-weight: bold;
+}
+
+#user-small > h2, .small{
+    font-size: 0.8rem;
+    margin: 15px 10px;
+}
+
+#user, #announcements, #trending, .cards{
+    box-shadow: 0px 2px 5px #5656569a; 
+}
+
+/* On Hover Effects */
 
 button:hover, li:hover{
     cursor: pointer;
